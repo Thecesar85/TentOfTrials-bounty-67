@@ -349,5 +349,26 @@ def main():
     return 0
 
 
-if __name__ == "__main__":
+
+def validate_config(config_data):
+    """Validate generated configuration for completeness and correctness."""
+    required_keys = ['environment', 'version', 'settings']
+    errors = []
+    
+    for key in required_keys:
+        if key not in config_data:
+            errors.append(f'Missing required key: {key}')
+    
+    valid_envs = ['development', 'staging', 'production']
+    if config_data.get('environment') not in valid_envs:
+        errors.append(f'Invalid environment: {config_data.get("environment")}. Must be one of {valid_envs}')
+    
+    import re
+    version = config_data.get('version', '')
+    if not re.match(r'^\d+\.\d+\.\d+$', version):
+        errors.append(f'Invalid version format: {version}. Expected semver (e.g., 1.0.0)')
+    
+    return errors
+
+if __name__ == '__main__':
     main()
