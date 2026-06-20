@@ -1,0 +1,15 @@
+Tent of Trials - Build Log
+========================
+
+Build environment: Windows 10 (git-bash/MSYS)
+
+Module results:
+  config_generator (Python): SKIP (not in MODULES, standalone tool)
+
+Python tests run separately:
+  tools/test_config_generator.py: All 21 tests PASSED
+  SENSITIVE_KEYS deduplication: fixed
+
+Tools with partial/failed builds omitted due to missing compilers in this environment.
+Build orchestrator skipped full module builds because dependencies (npm, cargo, go, etc.)
+are not installed. The Python toolchain change is scoped to config_generator only.
