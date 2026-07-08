@@ -166,10 +166,10 @@ ENV_OVERRIDES: Dict[str, Dict[str, Any]] = {
     },
 }
 
-SENSITIVE_KEYS = [
+SENSITIVE_KEYS = sorted(set([
     "database.password", "redis.password", "auth.jwt_secret",
     "auth.jwt_secret", "auth.jwt_secret",
-]
+]))
 
 
 def merge_config(base: Dict, override: Dict) -> Dict:
