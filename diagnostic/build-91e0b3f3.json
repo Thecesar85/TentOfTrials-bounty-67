@@ -1,0 +1,86 @@
+{
+  "generated_at": "2026-08-18T23:33:17.753560+00:00",
+  "commit": "91e0b3f3",
+  "diagnostic_logd": null,
+  "diagnostic_logd_error": null,
+  "chunked": false,
+  "chunk_size_bytes": null,
+  "password": null,
+  "decrypt_command": null,
+  "total_modules": 10,
+  "passed": 2,
+  "failed": 8,
+  "modules": [
+    {
+      "name": "backend",
+      "status": "FAIL",
+      "elapsed_seconds": 0.098,
+      "artifact": null,
+      "output": "\"cargo\" no se reconoce como un comando interno o externo,\nprograma o archivo por lotes ejecutable."
+    },
+    {
+      "name": "frontend",
+      "status": "PASS",
+      "elapsed_seconds": 49.48,
+      "artifact": "C:\\Plus\\ai-business\\bounties_work\\tent_of_trials_67\\repo\\frontend\\dist",
+      "output": "> tent-frontend@0.0.0 build\n> tsc -b && vite build\n\n\u001b[36mvite v6.4.3 \u001b[32mbuilding for production...\u001b[36m\u001b[39m\ntransforming...\n\u001b[32m\u00e2\u0153\u201c\u001b[39m 100 modules transformed.\nrendering chunks...\ncomputing gzip size...\n\u001b[2mdist/\u001b[22m\u001b[32mindex.html                 \u001b[39m\u001b[1m\u001b[2m  0.63 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m \u00e2\u201d\u201a gzip:  0.35 kB\u001b[22m\n\u001b[2mdist/\u001b[22m\u001b[36massets/state-BkjSKDbY.js   \u001b[39m\u001b[1m\u001b[2m  8.91 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m \u00e2\u201d\u201a gzip:  3.54 kB\u001b[22m\u001b[2m \u00e2\u201d\u201a map:    57.15 kB\u001b[22m\n\u001b[2mdist/\u001b[22m\u001b[36massets/vendor-CREcWLHI.js  \u001b[39m\u001b[1m\u001b[2m 48.93 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m \u00e2\u201d\u201a gzip: 17.25 kB\u001b[22m\u001b[2m \u00e2\u201d\u201a map:   481.27 kB\u001b[22m\n\u001b[2mdist/\u001b[22m\u001b[36massets/index-CyxcoTyU.js   \u001b[39m\u001b[1m\u001b[2m231.32 kB\u001b[22m\u001b[1m\u001b[22m\u001b[2m \u00e2\u201d\u201a gzip: 72.16 kB\u001b[22m\u001b[2m \u00e2\u201d\u201a map: 1,045.57 kB\u001b[22m\n\u001b[32m\u00e2\u0153\u201c built in 3.38s\u001b[39m"
+    },
+    {
+      "name": "market",
+      "status": "FAIL",
+      "elapsed_seconds": 0.059,
+      "artifact": null,
+      "output": "\"go\" no se reconoce como un comando interno o externo,\nprograma o archivo por lotes ejecutable."
+    },
+    {
+      "name": "frailbox",
+      "status": "FAIL",
+      "elapsed_seconds": 0.049,
+      "artifact": null,
+      "output": "\"make\" no se reconoce como un comando interno o externo,\nprograma o archivo por lotes ejecutable."
+    },
+    {
+      "name": "engine",
+      "status": "FAIL",
+      "elapsed_seconds": 14.432,
+      "artifact": null,
+      "output": "Versi\u00c3\u00b3n de MSBuild 17.14.40+3e7442088 para .NET Framework\n\n  1>Checking Build System\n  Building Custom Rule C:/Plus/ai-business/bounties_work/tent_of_trials_67/repo/frailbox/engine/CMakeLists.txt\n  Examinando or\u00c3\u00adgenes para las dependencias de m\u00c3\u00b3dulo...\ncl : L\u00c3\u00adnea de comandos error D8016: las opciones de l\u00c3\u00adnea de comandos '/O2' y '/RTC1' son incompatibles [C:\\Plus\\ai-business\\bounties_work\\tent_of_trials_67\\repo\\frailbox\\engine\\build\\trial-engine.vcxproj]\ncl : L\u00c3\u00adnea de comandos error D8016: las opciones de l\u00c3\u00adnea de comandos '/O2' y '/RTC1' son incompatibles [C:\\Plus\\ai-business\\bounties_work\\tent_of_trials_67\\repo\\frailbox\\engine\\build\\trial-engine.vcxproj]\ncl : L\u00c3\u00adnea de comandos error D8016: las opciones de l\u00c3\u00adnea de comandos '/O2' y '/RTC1' son incompatibles [C:\\Plus\\ai-business\\bounties_work\\tent_of_trials_67\\repo\\frailbox\\engine\\build\\trial-engine.vcxproj]\ncl : L\u00c3\u00adnea de comandos error D8016: las opciones de l\u00c3\u00adnea de comandos '/O2' y '/RTC1' son incompatibles [C:\\Plus\\ai-business\\bounties_work\\tent_of_trials_67\\repo\\frailbox\\engine\\build\\trial-engine.vcxproj]\ncl : L\u00c3\u00adnea de comandos error D8016: las opciones de l\u00c3\u00adnea de comandos '/O2' y '/RTC1' son incompatibles [C:\\Plus\\ai-business\\bounties_work\\tent_of_trials_67\\repo\\frailbox\\engine\\build\\trial-engine.vcxproj]\ncl : L\u00c3\u00adnea de comandos error D8016: las opciones de l\u00c3\u00adnea de comandos '/O2' y '/RTC1' son incompatibles [C:\\Plus\\ai-business\\bounties_work\\tent_of_trials_67\\repo\\frailbox\\engine\\build\\trial-engine.vcxproj]\ncl : L\u00c3\u00adnea de comandos error D8016: las opciones de l\u00c3\u00adnea de comandos '/O2' y '/RTC1' son incompatibles [C:\\Plus\\ai-business\\bounties_work\\tent_of_trials_67\\repo\\frailbox\\engine\\build\\trial-engine.vcxproj]\ncl : l\u00c3\u00adnea de comandos  error D8016: las opciones de l\u00c3\u00adnea de comandos '/O2' y '/RTC1' son incompatibles [C:\\Plus\\ai-business\\bounties_work\\tent_of_trials_67\\repo\\frailbox\\engine\\build\\trial-engine.vcxproj]\n  Compilando...\ncl : L\u00c3\u00adnea de comandos error D8016: las opciones de l\u00c3\u00adnea de comandos '/O2' y '/RTC1' son incompatibles [C:\\Plus\\ai-business\\bounties_work\\tent_of_trials_67\\repo\\frailbox\\engine\\build\\trial-engine.vcxproj]\ncl : L\u00c3\u00adnea de comandos error D8016: las opciones de l\u00c3\u00adnea de comandos '/O2' y '/RTC1' son incompatibles [C:\\Plus\\ai-business\\bounties_work\\tent_of_trials_67\\repo\\frailbox\\engine\\build\\trial-engine.vcxproj]\ncl : L\u00c3\u00adnea de comandos error D8016: las opciones de l\u00c3\u00adnea de comandos '/O2' y '/RTC1' son incompatibles [C:\\Plus\\ai-business\\bounties_work\\tent_of_trials_67\\repo\\frailbox\\engine\\build\\trial-engine.vcxproj]\ncl : l\u00c3\u00adnea de comandos  error D8016: las opciones de l\u00c3\u00adnea de comandos '/O2' y '/RTC1' son incompatibles [C:\\Plus\\ai-business\\bounties_work\\tent_of_trials_67\\repo\\frailbox\\engine\\build\\trial-engine.vcxproj]\ncl : L\u00c3\u00adnea de comandos error D8016: las opciones de l\u00c3\u00adnea de comandos '/O2' y '/RTC1' son incompatibles [C:\\Plus\\ai-business\\bounties_work\\tent_of_trials_67\\repo\\frailbox\\engine\\build\\trial-engine.vcxproj]\ncl : L\u00c3\u00adnea de comandos error D8016: las opciones de l\u00c3\u00adnea de comandos '/O2' y '/RTC1' son incompatibles [C:\\Plus\\ai-business\\bounties_work\\tent_of_trials_67\\repo\\frailbox\\engine\\build\\trial-engine.vcxproj]\ncl : L\u00c3\u00adnea de comandos error D8016: las opciones de l\u00c3\u00adnea de comandos '/O2' y '/RTC1' son incompatibles [C:\\Plus\\ai-business\\bounties_work\\tent_of_trials_67\\repo\\frailbox\\engine\\build\\trial-engine.vcxproj]\ncl : L\u00c3\u00adnea de comandos error D8016: las opciones de l\u00c3\u00adnea de comandos '/O2' y '/RTC1' son incompatibles [C:\\Plus\\ai-business\\bounties_work\\tent_of_trials_67\\repo\\frailbox\\engine\\build\\trial-engine.vcxproj]"
+    },
+    {
+      "name": "compliance",
+      "status": "PASS",
+      "elapsed_seconds": 1.762,
+      "artifact": "C:\\Plus\\ai-business\\bounties_work\\tent_of_trials_67\\repo\\compliance\\build",
+      "output": "Note: ComplianceAuditor.java uses or overrides a deprecated API.\nNote: Recompile with -Xlint:deprecation for details."
+    },
+    {
+      "name": "v2-market-stream",
+      "status": "FAIL",
+      "elapsed_seconds": 0.045,
+      "artifact": null,
+      "output": "\"ruby\" no se reconoce como un comando interno o externo,\nprograma o archivo por lotes ejecutable."
+    },
+    {
+      "name": "nfc-scanner",
+      "status": "FAIL",
+      "elapsed_seconds": 0.052,
+      "artifact": null,
+      "output": "\"luac\" no se reconoce como un comando interno o externo,\nprograma o archivo por lotes ejecutable."
+    },
+    {
+      "name": "openapi-haskell",
+      "status": "FAIL",
+      "elapsed_seconds": 0.04,
+      "artifact": null,
+      "output": "\"ghc\" no se reconoce como un comando interno o externo,\nprograma o archivo por lotes ejecutable."
+    },
+    {
+      "name": "openapi-tools",
+      "status": "FAIL",
+      "elapsed_seconds": 0.058,
+      "artifact": null,
+      "output": "\"luac\" no se reconoce como un comando interno o externo,\nprograma o archivo por lotes ejecutable."
+    }
+  ],
+  "pr_note": "Encrypted diagnostic logd artifact was not created; include this JSON report showing why. The encrypted .logd is the required diagnostic content for PR review; this JSON file is metadata. Maintainers may ask you to remove these diagnostic artifacts before merging."
+}
