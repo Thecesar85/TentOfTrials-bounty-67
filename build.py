@@ -290,11 +290,14 @@ def build_module(
                     text=True,
                     timeout=120,
                     env={k: v for k, v in env.items() if k != "NODE_ENV"},
+                    shell=(sys.platform == "win32"),
                 )
                 if install_result.returncode != 0:
                     return False, time.time() - start, f"npm install failed:\n{install_result.stderr}"
             except subprocess.TimeoutExpired:
                 return False, time.time() - start, "npm install TIMEOUT (120s)"
+            except FileNotFoundError as e:
+                return False, 0, f"Command not found: {e}"
 
     if module.name == "engine":
 
@@ -341,6 +344,7 @@ def build_module(
             text=True,
             env=env,
             timeout=300,
+            shell=(sys.platform == "win32"),
         )
     except subprocess.TimeoutExpired:
         return False, time.time() - start, "BUILD TIMEOUT (300s)"
