@@ -14,6 +14,13 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Optional
 
+if sys.platform == "win32":
+    try:
+        sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+        sys.stderr.reconfigure(encoding="utf-8", errors="replace")
+    except Exception:
+        pass
+
 ROOT = Path(__file__).resolve().parent
 DIAGNOSTIC_DIR = ROOT / "diagnostic"
 DIAGNOSTIC_CHUNK_SIZE = 40 * 1024 * 1024
@@ -283,11 +290,14 @@ def build_module(
                     text=True,
                     timeout=120,
                     env={k: v for k, v in env.items() if k != "NODE_ENV"},
+                    shell=(sys.platform == "win32"),
                 )
                 if install_result.returncode != 0:
                     return False, time.time() - start, f"npm install failed:\n{install_result.stderr}"
             except subprocess.TimeoutExpired:
                 return False, time.time() - start, "npm install TIMEOUT (120s)"
+            except FileNotFoundError as e:
+                return False, 0, f"Command not found: {e}"
 
     if module.name == "engine":
 
@@ -334,6 +344,7 @@ def build_module(
             text=True,
             env=env,
             timeout=300,
+            shell=(sys.platform == "win32"),
         )
     except subprocess.TimeoutExpired:
         return False, time.time() - start, "BUILD TIMEOUT (300s)"
@@ -720,7 +731,7 @@ Diagnostic bundle:
         print(f"\n  {color('⚠ Some tools missing  -  will try anyway:', Colors.YELLOW)}")
         for m in missing:
             print(f"    {m}")
-        print(f"  {color('Not all modules will build. That\'s fine.', Colors.GRAY)}")
+        print("  " + color("Not all modules will build. That's fine.", Colors.GRAY))
     else:
         print(f"  {color('✓ All prerequisites found', Colors.GREEN)}")
 
