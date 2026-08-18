@@ -12,6 +12,8 @@ import sys
 import time
 from dataclasses import dataclass
 from pathlib import Path
+from typing import Optional
+
 if sys.platform == "win32":
     try:
         sys.stdout.reconfigure(encoding="utf-8", errors="replace")
