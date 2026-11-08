@@ -1,0 +1,52 @@
+{
+  "generated_at": "2026-11-08T01:29:12.740135+00:00",
+  "commit": "4f5654e0",
+  "diagnostic_logd": "diagnostic/build-4f5654e0.logd",
+  "diagnostic_logd_error": null,
+  "chunked": false,
+  "chunk_size_bytes": null,
+  "password": "FbJXSPqOFEjNIIGl9JmeYmACvOZP-kmC41C3SGvvRf4=",
+  "decrypt_command": "python3 -c \"import base64; from cryptography.hazmat.primitives.ciphers.aead import AESGCM; key = base64.urlsafe_b64decode('FbJXSPqOFEjNIIGl9JmeYmACvOZP-kmC41C3SGvvRf4='); data = open('diagnostic/build-4f5654e0.logd', 'rb').read(); print(AESGCM(key).decrypt(data[9:21], data[21:], data[:9]).decode('utf-8'))\"",
+  "total_modules": 3,
+  "passed": 3,
+  "failed": 0,
+  "modules": [
+    {
+      "name": "market",
+      "status": "PASS",
+      "elapsed_seconds": 0.903,
+      "artifact": "/Users/nevioniebel/Documents/Projekte/Freelancing/scratch/tent_bounty_67/market/market",
+      "output": ""
+    },
+    {
+      "name": "compliance",
+      "status": "PASS",
+      "elapsed_seconds": 0.417,
+      "artifact": "/Users/nevioniebel/Documents/Projekte/Freelancing/scratch/tent_bounty_67/compliance/build",
+      "output": "Hinweis: ComplianceAuditor.java verwendet oder \u00fcberschreibt eine veraltete API.\nHinweis: Wiederholen Sie die Kompilierung mit -Xlint:deprecation, um Details zu erhalten."
+    },
+    {
+      "name": "v2-market-stream",
+      "status": "PASS",
+      "elapsed_seconds": 0.062,
+      "artifact": null,
+      "output": "Syntax OK"
+    }
+  ],
+  "pr_note": "Encrypted diagnostic logd artifact was not created; include this JSON report showing why. The encrypted .logd is the required diagnostic content for PR review; this JSON file is metadata. Maintainers may ask you to remove these diagnostic artifacts before merging.",
+  "format": "safe-logd-v1",
+  "files": {
+    "build.log": {
+      "bytes": 291,
+      "sha256": "00957ab36952bdcd073eeab2d544c032be78f456f89201e7eefa13ab4fe0806e"
+    },
+    "build-summary.txt": {
+      "bytes": 301,
+      "sha256": "49a1dea208b91c9325d460e4be1f0d8fa5acfc61a143fbaf7d02a28a423625b0"
+    },
+    "system-info.txt": {
+      "bytes": 41,
+      "sha256": "93cb058934c2f60a255cdf3082ea4db517db7d99f1af23539769e498a77daf0f"
+    }
+  }
+}
